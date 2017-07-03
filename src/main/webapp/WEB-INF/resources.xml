@@ -13,21 +13,21 @@
     #attributeOrder = $naturalOrder
   </Service>
 
-  <Resource id="CarControllerPool" type="ManagedExecutorService">
+  <Resource id="RestControllerPool" type="ManagedExecutorService">
     Core = 4
     Max = 128
     KeepAlive = 60 s
     Queue = 64
-    ThreadFactory = org.apache.openejb.threads.impl.ManagedThreadFactoryImpl
+    #ThreadFactory = org.apache.openejb.threads.impl.ManagedThreadFactoryImpl
     Lazy = true
   </Resource>
 
-  <Resource id="CarServicePool" type="ManagedExecutorService">
+  <Resource id="ServicePool" type="ManagedExecutorService">
     Core = 4
     Max = 128
     KeepAlive = 60 s
-    #Queue = 64
-    ThreadFactory = org.apache.openejb.threads.impl.ManagedThreadFactoryImpl
+    Queue = 64
+    #ThreadFactory = org.apache.openejb.threads.impl.ManagedThreadFactoryImpl
     Lazy = true
   </Resource>
 </resources>

@@ -1,4 +1,4 @@
-package com.brandonlamb.example.domain
+package com.sbux.gred.domain
 
 import java.util.concurrent.CompletableFuture
 import java.util.function.Supplier
@@ -6,7 +6,7 @@ import javax.annotation.Resource
 import javax.enterprise.concurrent.ManagedExecutorService
 
 open class CarService {
-  @Resource(name = "CarServicePool") private lateinit var mes: ManagedExecutorService
+  @Resource(name = "ServicePool") private lateinit var mes: ManagedExecutorService
 
   private val cars = arrayOf(
     Car(CarMake.FORD, "Pinto", "Red"),
